@@ -1,0 +1,38 @@
+body {
+  background-color: #88a372;
+}
+
+.title {
+  color: white;
+}
+
+.form-control {
+  resize: none;
+}
+
+.btn-custom,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:not(:disabled):not(:disabled):active {
+  background-color: #ebb707;
+  border-radius: 15px;
+  width: 100%;
+  color: white;
+}
+
+.calendar,
+.calendar:hover,
+.calendar:active,
+.calendar:not(:disabled):not(:disabled):active {
+  background-color: white;
+  color: #88a372;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+}
+
+.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+}
