@@ -23,8 +23,8 @@ function fetchData() {
 
 function updateHtml() {
   // Update your HTML content here
-  const itemNameElement = document.getElementById('itemName');
-  const itemQuantityElement = document.getElementById('itemQuantity');
+  const itemNameElement = document.getElementById('name');
+  const itemQuantityElement = document.getElementByClass('quantity');
 
   if (itemNameElement && itemQuantityElement) {
     itemNameElement.textContent = jsonData[0].name;
