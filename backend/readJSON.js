@@ -22,13 +22,19 @@ function fetchData() {
 }
 
 function updateHtml() {
-  // Update your HTML content here
-  const itemNameElement = document.getElementById('name');
-  const itemQuantityElement = document.getElementByClass('quantity');
+  const jsonContentElement = document.getElementById('jsonContent');
 
-  if (itemNameElement && itemQuantityElement) {
-    itemNameElement.textContent = jsonData[0].name;
-    itemQuantityElement.textContent = jsonData[0].quantity;
+  if (jsonContentElement) {
+    // Loop through the jsonData array and display each item
+    jsonData.forEach(item => {
+      const itemContainer = document.createElement('div');
+      itemContainer.innerHTML = `
+        <p><strong>Name:</strong> ${item.name}</p>
+        <p><strong>Quantity:</strong> ${item.quantity}</p>
+        <hr>
+      `;
+      jsonContentElement.appendChild(itemContainer);
+    });
   }
 }
 
