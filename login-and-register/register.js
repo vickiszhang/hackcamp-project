@@ -1,7 +1,13 @@
 
 function createAccount(email, username, password) {
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    const newUser = { "email": email, "username": username, "password": password };
+    const newUser = { 
+        "email": email, 
+        "username": username, 
+        "password": password,
+        "name": username,
+        "location": "Canada",
+        "bio": "I am a new user!"};
     existingUsers.push(newUser);
     localStorage.setItem('users', JSON.stringify(existingUsers));
 }
