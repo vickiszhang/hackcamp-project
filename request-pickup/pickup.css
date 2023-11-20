@@ -85,15 +85,15 @@ h1{
     background-color: white;
   }
   
-  /* If you want the content centered horizontally and vertically */
+
   .centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
   }
   
-  /* Style the image inside the centered container, if needed */
   .centered img {
     width: 150px;
     border-radius: 50%;
@@ -112,3 +112,23 @@ h1{
   .subheading-r{
     font-size: 20px;
   }
+
+  #logo{
+    margin-left:35px;
+  }
+
+#receipt{
+  width: 400px;
+  height: 600px;
+  border: 1px solid black;
+  padding: 15px;
+  text-align: center;
+  
+}
+
+#bg-image{
+  background-image: url(../assets/logo.png);
+  opacity: 0.2;
+  background-repeat: no-repeat;
+
+}

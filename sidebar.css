@@ -17,3 +17,7 @@ body {
   justify-content: flex-end;
   display: flex;
 }
+
+.logo{
+  margin-left: 85px;
+}

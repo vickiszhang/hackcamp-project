@@ -150,6 +150,11 @@ ul {
   }
 
   .text{
-    font-size: 13px;
+    font-size: 15px;
 
+  }
+
+  .description{
+    font-size: 20px;
+    padding-left: 10px;
   }
