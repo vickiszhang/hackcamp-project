@@ -1,8 +1,6 @@
-let jsonData;
-
-function fetchData() {
+function fetchData(file) {
   // Assuming data.json is in the same directory as script.js
-  const jsonFile = 'data.json';
+  const jsonFile = file;
 
   fetch(jsonFile)
     .then(response => {
@@ -12,8 +10,7 @@ function fetchData() {
       return response.json();
     })
     .then(data => {
-      jsonData = data;
-      console.log('Data loaded:', jsonData);
+      localStorage.setItem('items', JSON.stringify(data));
       updateHtml();
     })
     .catch(error => {
@@ -23,15 +20,25 @@ function fetchData() {
 
 function updateHtml() {
   const jsonContentElement = document.getElementById('jsonContent');
+  const storedItems = JSON.parse(localStorage.getItem('items'));
 
   if (jsonContentElement) {
     // Loop through the jsonData array and display each item
-    jsonData.forEach(item => {
+    storedItems.forEach(item => {
       const itemContainer = document.createElement('div');
       itemContainer.innerHTML = `
-        <p><strong>Name:</strong> ${item.name}</p>
-        <p><strong>Quantity:</strong> ${item.quantity}</p>
-        <hr>
+        <div class="card">
+          <div class='item-image' style="background-image: url('${item.photo}');">
+          </div>
+          <div class='description'>
+              <h1 class = 'username'>@${item.user}</h1>
+              <h1 class = 'name'>${item.name}</h1>
+              <h1>Expiry Date: ${item.date}</h1>
+              <h1>Meeting Location: ${item.location}</h1>
+              <h1>Available: ${item.available}</h1>
+          </div>
+          <button class='request'>Request Pickup</button>
+        </div> 
       `;
       jsonContentElement.appendChild(itemContainer);
     });
@@ -39,5 +46,5 @@ function updateHtml() {
 }
 
 // Call fetchData when the script is loaded
-fetchData();
+fetchData('/backend/productData.json');
 console.log('completed!');
