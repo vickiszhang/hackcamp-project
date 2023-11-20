@@ -13,3 +13,10 @@ function checkAccount(email, password) {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     return users.some(user => user.email === email && user.password === password);
     }
+
+function setCurrentUser() {
+    const name = document.getElementById("email").value;
+    localStorage.setItem('items', JSON.stringify(name));
+    console.log(name);
+    window.location.href = '../browse.html';
+}

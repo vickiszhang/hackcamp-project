@@ -15,12 +15,9 @@ function submit() {
   const available = true;
 
   const storedItems = JSON.parse(localStorage.getItem('items'));
-  console.log(storedItems);
   const newItem = {name, description, date, time, location, available};
-  console.log(newItem);
   storedItems.push(newItem);
   localStorage.setItem('items', JSON.stringify(storedItems));
-  console.log(localStorage.getItem('items'));
 }
 
 function convertImage(event) {
