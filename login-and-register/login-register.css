@@ -70,6 +70,14 @@ body{
   justify-content: center;
 }
 
+.register-btn,
+.register-btn:hover,
+.register-btn:active {
+  background-color: #9fbf85;
+  color: white;
+  width: 100%;
+}
+
 /* .login-btn {
   background-color: #9e9e9e;
   color: white;
