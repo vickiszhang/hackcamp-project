@@ -5,7 +5,8 @@
         "photo": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/shutterstock_785723077.jpg?itok=n6scdM4T",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "Spaghetti",
@@ -13,7 +14,8 @@
         "photo": "https://i5.walmartimages.com/asr/b308bc64-baeb-468b-b52e-a7c194c50989.cfee0af97af876519792a31d8fe0c5de.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
         "location": "Ducking Park",
         "date": "12/04/2023",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "dog food",
@@ -21,7 +23,8 @@
         "photo": "https://m.media-amazon.com/images/I/81xyE8OZBqL.jpg",
         "location": "Engineering Cairn",
         "date": "01/01/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "Rosemary",
@@ -29,7 +32,8 @@
         "photo": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/shutterstock_785723077.jpg?itok=n6scdM4T",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "Eggs",
@@ -37,7 +41,8 @@
         "photo": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/shutterstock_785723077.jpg?itok=n6scdM4T",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "Strawberries",
@@ -45,7 +50,8 @@
         "photo": "https://www.health.com/thmb/18xOlsk4Eb84ciGWMo9LVXBkWKk=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc()/Strawberries-c5f434e7729e47c5b32c0deaa029386c.jpg",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "basil",
@@ -53,7 +59,8 @@
         "photo": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/shutterstock_785723077.jpg?itok=n6scdM4T",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "basil",
@@ -61,7 +68,8 @@
         "photo": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/shutterstock_785723077.jpg?itok=n6scdM4T",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     },
     {
         "name": "basil",
@@ -69,6 +77,7 @@
         "photo": "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/shutterstock_785723077.jpg?itok=n6scdM4T",
         "location": "IKB 000",
         "date": "02/12/2024",
-        "available": true
+        "available": true,
+        "description": "extra basil from my garden"
     }
 ]

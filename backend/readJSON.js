@@ -28,6 +28,7 @@ function updateHtml() {
 
   if (jsonContentElement) {
     // Loop through the jsonData array and display each item
+
     storedItems.forEach(item => {
       const itemContainer = document.createElement('div');
       itemContainer.innerHTML = `

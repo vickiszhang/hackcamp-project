@@ -7,16 +7,20 @@
 // });
 
 function submit() {
-  const title = document.getElementById("listingTitle");
-  const description = document.getElementById("description");
-  const expDate = document.getElementById("expDate");
-  const availableTime = document.getElementById("availableTime");
-  const location = document.getElementById("pickupPlace");
+  const name = document.getElementById("listingTitle").value;
+  const description = document.getElementById("description").value;
+  const date = document.getElementById("expDate").value;
+  const time = document.getElementById("availableTime").value;
+  const location = document.getElementById("pickupPlace").value;
+  const available = true;
 
   const storedItems = JSON.parse(localStorage.getItem('items'));
-  const newItem = {title, description, expDate, availableTime, location};
+  console.log(storedItems);
+  const newItem = {name, description, date, time, location, available};
+  console.log(newItem);
   storedItems.push(newItem);
-  localStorage.setItem('users', JSON.stringify(existingUsers));
+  localStorage.setItem('items', JSON.stringify(storedItems));
+  console.log(localStorage.getItem('items'));
 }
 
 function convertImage(event) {
