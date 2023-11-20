@@ -52,8 +52,13 @@ body{
     border-radius: 50%;
   }
 
-  .btn {
+  .btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-btn{
     background-color:#9E9E9E;
     color: white;
-
   }
