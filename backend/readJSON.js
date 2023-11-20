@@ -45,6 +45,11 @@ function updateHtml() {
   }
 }
 
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('show');
+}
+
 // Call fetchData when the script is loaded
 fetchData('/backend/productData.json');
 console.log('completed!');
