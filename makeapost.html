@@ -13,38 +13,65 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <script
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css"
+    />
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
+    <link rel="stylesheet" href="makeapost.css" />
+  </head>
+  <body>
+    <script src="makeapost.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="makeapost.js"></script>
-    <link rel="stylesheet" href="makeapost.css" />
-  </head>
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
+
     <div class="container">
       <div class="row mt-3">
         <div class="col-1">
-          <i class="bi bi-list fs-2"></i>
+          <i class="bi bi-list fs-2"> </i>
         </div>
-        <div class="col-5"></div>
+        <div class="col-5 mt-5">
+          <div class="img-container mt-5">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div
+                class="fileinput-preview img-thumbnail"
+                data-trigger="fileinput"
+                style="width: 50vh; height: 30vh"
+              ></div>
+              <div class="mt-4">
+                <span class="btn btn-outline-secondary btn-file">
+                  <span class="fileinput-new">Select image</span>
+                  <span class="fileinput-exists">Change</span>
+                  <input type="file" name="..." />
+                </span>
+                <a
+                  href="#"
+                  class="btn btn-outline-secondary fileinput-exists"
+                  data-dismiss="fileinput"
+                >
+                  Remove
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-6">
           <div class="container">
             <div class="row ms-5">
               <div class="input-fields mt-5">
                 <h6 class="title text-left">Listing Title</h6>
                 <div class="col-8">
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" id="listingTitle" />
                 </div>
               </div>
             </div>
@@ -52,7 +79,12 @@
               <div class="input-fields">
                 <h6 class="title">Description</h6>
                 <div class="col-8">
-                  <textarea type="text" class="form-control" rows="4">
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    rows="4"
+                    id="description"
+                  >
                   </textarea>
                 </div>
               </div>
@@ -61,30 +93,9 @@
               <div class="input-fields">
                 <h6 class="title">Expiration Date</h6>
                 <div class="col-8">
-                  <!-- <div class="input-group" id="datepicker"> -->
-                  <!-- <input
-                      class="form-control calendar"
-                      placeholder="yyyy-mm-dd"
-                      name="dp"
-                      [(ngModel)]="model"
-                      ngbDatepicker
-                      #d="ngbDatepicker"
-                    />
-                    <button
-                      class="btn btn-outline-secondary bi bi-calendar3 calendar"
-                      (click)="toggleDatePicker()"
-                      type="button"
-                    ></button> -->
                   <div class="input-group" id="datepicker">
                     <input id="expDate" class="form-control" type="date" />
                   </div>
-                  <!-- <span>
-                      <button
-                        class="btn btn-outline-secondary bi bi-calendar3 calendar"
-                        (click)="toggleDatePicker()"
-                        type="button"
-                      ></button>
-                    </span> -->
                 </div>
               </div>
             </div>
@@ -92,7 +103,7 @@
               <div class="input-fields">
                 <h6 class="title">Available Date and Time</h6>
                 <div class="col-8">
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" id="availableTime" />
                 </div>
               </div>
             </div>
@@ -100,14 +111,21 @@
               <div class="input-fields">
                 <h6 class="title">Pick Up Location</h6>
                 <div class="col-8">
-                  <input type="text" class="form-control" name="startDate" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="startDate"
+                    id="pickupTime"
+                  />
                 </div>
               </div>
             </div>
-            <div class="row mt-3 ms-5">
+            <div class="row mt-5 ms-5">
               <div class="input-fields">
                 <div class="col-8">
-                  <button class="btn btn-custom">Submit</button>
+                  <button class="btn btn-custom-submit" onclick="submit()">
+                    Submit
+                  </button>
                 </div>
               </div>
             </div>

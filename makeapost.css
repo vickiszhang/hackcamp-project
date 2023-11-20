@@ -10,10 +10,10 @@ body {
   resize: none;
 }
 
-.btn-custom,
-.btn-custom:hover,
-.btn-custom:active,
-.btn-custom:not(:disabled):not(:disabled):active {
+.btn-custom-submit,
+.btn-custom-submit:hover,
+.btn-custom-submit:active,
+.btn-custom-submit:not(:disabled):not(:disabled):active {
   background-color: #ebb707;
   border-radius: 15px;
   width: 100%;
@@ -35,4 +35,35 @@ body {
   outline: none !important;
   outline-width: 0 !important;
   box-shadow: none;
+}
+
+.upload-image,
+.upload-image:hover,
+.upload-image:active,
+.upload-image:not(:disabled):not(:disabled):active {
+  background-color: #ebb707;
+  color: white;
+  border-radius: 20px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 80%;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.img-area {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.btn-file {
+  background-color: #ebb707;
+  color: white;
+  border: none;
 }
