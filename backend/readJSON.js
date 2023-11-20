@@ -41,7 +41,7 @@ function updateHtml() {
               <h1>Meeting Location: ${item.location}</h1>
               <h1>Available: ${item.available}</h1>
           </div>
-          <a href="pickup-sched.html"> <button class='request'>Request Pickup</button> </a>
+          <a href="./request-pickup/pickup-sched.html"> <button class='request'>Request Pickup</button> </a>
         </div> 
       `;
       jsonContentElement.appendChild(itemContainer);
@@ -50,5 +50,5 @@ function updateHtml() {
 }
 
 // Call fetchData when the script is loaded
-fetchData('/backend/productData.json');
+fetchData('./backend/productData.json');
 console.log('completed!');
