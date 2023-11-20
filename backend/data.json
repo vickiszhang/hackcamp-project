@@ -1,0 +1,10 @@
+[
+    {
+        "name": "item1",
+        "quantity": 10
+    },
+    {
+        "name": "item2",
+        "quantity": 5
+    }
+]
