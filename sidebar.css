@@ -2,7 +2,10 @@ body {
   background-color: #88a372;
 }
 
-.btn-custom {
+.btn-custom,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:not(:disabled):not(:disabled):active {
   background-color: #ebb707;
   color: white;
   width: 100%;
