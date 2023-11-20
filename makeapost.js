@@ -8,13 +8,34 @@
 
 function submit() {
   console.log("hello");
+  const title = document.getElementById("listingTitle");
+  const description = document.getElementById("description");
+  const expDate = document.getElementById("expDate");
+  const availableTime = document.getElementById("availableTime");
+  const location = document.getElementById("pickupPlace");
 }
 
-const uploadImage = document.querySelector(".upload-image");
-const inputFile = document.querySelector("#file");
+function convertImage(event) {
+  var file = event.target.files[0];
+  localStorage.removeItem("imageBase64");
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = function (event) {
+      var base64String = event.target.result;
+      localStorage.setItem("imageBase64", base64String);
+      console.log(base64String); // You can use this Base64 string as needed
+    };
+    reader.readAsDataURL(file);
+  }
+}
 
-uploadImage.addEventListener("click", function () {
-  inputFile.click();
-});
+// const uploadImage = document.querySelector(".upload-image");
+// const inputFile = document.querySelector("#file");
 
-inputFile.addEventListener("change", function () {});
+// uploadImage.addEventListener("click", function () {
+//   inputFile.click();
+// });
+
+// inputFile.addEventListener("change", function () {
+
+// });
