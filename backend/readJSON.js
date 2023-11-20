@@ -37,12 +37,17 @@ function updateHtml() {
               <h1>Meeting Location: ${item.location}</h1>
               <h1>Available: ${item.available}</h1>
           </div>
-          <button class='request'>Request Pickup</button>
+          <a href="pickup-sched.html"> <button class='request'>Request Pickup</button> </a>
         </div> 
       `;
       jsonContentElement.appendChild(itemContainer);
     });
   }
+}
+
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('show');
 }
 
 // Call fetchData when the script is loaded
