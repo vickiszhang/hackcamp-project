@@ -2,7 +2,10 @@ function fetchData(file) {
   // Assuming data.json is in the same directory as script.js
   const jsonFile = file;
 
-  fetch(jsonFile)
+  if(localStorage.getItem('items')) {
+    updateHtml();
+  } else {
+    fetch(jsonFile)
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -16,6 +19,7 @@ function fetchData(file) {
     .catch(error => {
       console.error('Fetch error:', error);
     });
+  }
 }
 
 function updateHtml() {
@@ -43,11 +47,6 @@ function updateHtml() {
       jsonContentElement.appendChild(itemContainer);
     });
   }
-}
-
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('show');
 }
 
 // Call fetchData when the script is loaded
