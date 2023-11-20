@@ -7,12 +7,16 @@
 // });
 
 function submit() {
-  console.log("hello");
   const title = document.getElementById("listingTitle");
   const description = document.getElementById("description");
   const expDate = document.getElementById("expDate");
   const availableTime = document.getElementById("availableTime");
   const location = document.getElementById("pickupPlace");
+
+  const storedItems = JSON.parse(localStorage.getItem('items'));
+  const newItem = {title, description, expDate, availableTime, location};
+  storedItems.push(newItem);
+  localStorage.setItem('users', JSON.stringify(existingUsers));
 }
 
 function convertImage(event) {
